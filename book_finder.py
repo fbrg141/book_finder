@@ -4,14 +4,15 @@ import xlrd
 import pandas
 import pickle
 import string
+import time
 map={}
 
-with open("log.txt", 'r+') as log:
-    print(log.readline().strip())
-    date = str(os.stat("inv__db.xlsx")[8]).strip()
+with open("log.txt", 'a+') as log:
+    print(log.readline())
+    date = time.ctime(os.stat("inv__db.xlsx")[8])
     print(date)
     if log.readline().strip() != date:
-        print("Updating database.")
+        print("Updating database...")
         for sh in  xlrd.open_workbook("inv__db.xlsx").sheets():
             for row in range(sh.nrows):
                 myCell1= sh.cell(row, 0)
@@ -22,16 +23,15 @@ with open("log.txt", 'r+') as log:
         with open("map.pickle", "wb") as handle:
             pickle.dump(map, handle, protocol=5)
         print("Done!")
-        log.truncate(0)
-        log.write(str(os.stat("inv__db.xlsx")[8]))
-#x=input()
-#if len(x) < 3:
-#    print("Alo pope, sta radis to")
-#for str1, str2 in map.items():
-#    if str(str2).find(x)  != -1:
-#        print(int(str1), str2)
+        log.write(time.ctime(os.stat("inv__db.xlsx")[8]))
+x=input()
+if len(x) < 3:
+    print("Alo pope, sta radis to")
+for str1, str2 in map.items():
+    if str(str2).find(x)  != -1:
+        print(int(str1), str2)
 
-
+#provera da li je i prazan
 # cuvanje mape
 # gui
 # podeli polja za pisca nazi i godinu
