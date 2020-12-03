@@ -1,0 +1,5 @@
+This file is used for storing log data ofinv__db.xlsx file.
+1606869597
+1606872043
+1606872068
+1606950858
