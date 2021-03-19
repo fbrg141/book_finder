@@ -1,6 +1,6 @@
 # BookFinder
-**
-This simple script is part of project which is a collaboration of local church and library. This script should provide a simple and fast search through inv__db.xlsx which contains information about old books in the district. The script is intended to be on a local computer which will contain a latest  inv__db.xlsx.**
+
+This simple script is part of project which is a collaboration of local church and library. This script should provide a simple and fast search through inv__db.xlsx which contains information about old books in the district. The script is intended to be on a local computer which will contain a latest  inv__db.xlsx.
 
 ------------
 
