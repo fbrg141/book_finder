@@ -12,5 +12,4 @@ Used python packages:
 - *pickle* for serialization
 - *tkinter* for simple UI
 
-`pip install xlsxwriter `
 
